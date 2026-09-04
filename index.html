@@ -52,6 +52,22 @@
     color: var(--sub); border-radius: 12px; padding: 2px 9px; font-size: 12px; cursor: pointer;
   }
   #stopbtn.on { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .crosslink {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--card-bg);
+    border: 1px solid var(--accent);
+    border-radius: 14px;
+    padding: 3px 10px;
+    white-space: nowrap;
+  }
+  .crosslink .arrow { font-size: 9px; opacity: 0.8; }
   #toprow2 { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
   .toggle {
     background: var(--card-bg); border: 1px solid var(--border); color: var(--sub);
@@ -186,6 +202,7 @@
       <input id="speed" type="range" min="0.2" max="1.2" step="0.05" value="1" aria-label="朗讀速度">
       <span id="speedval">1.00x</span>
       <button id="stopbtn" type="button">停止</button>
+      <a class="crosslink" href="https://ekrcjack.github.io/sentences/">例句集<span class="arrow">&#9656;</span></a>
     </div>
     <div id="toprow2">
       <button class="toggle on" id="t-rm" type="button">羅馬字</button>
