@@ -193,6 +193,13 @@
   table.te td.t-ex { background: rgba(176, 73, 47, 0.05); }
   table.te .pat { padding: 8px 10px; font-size: 13.5px; line-height: 1.6; }
 
+  .subhead {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    margin: 16px 0 5px;
+  }
+  .subhead h3 { font-size: 14px; margin: 0; color: var(--ink); }
+  .play-btn.small { padding: 3px 10px; font-size: 11.5px; }
+
   @media (max-width: 560px) {
     .th-long { display: none; }
     .th-short { display: inline; }
@@ -222,6 +229,7 @@
       <a href="#tbl-2" class="navlink">常體短形（普通形）</a>
       <a href="#tbl-3" class="navlink">句型本身的四態</a>
       <a href="#tbl-te" class="navlink">て形變化</a>
+      <a href="#tbl-short" class="navlink">short form 生成</a>
       </div>
     </div>
   </div>
@@ -376,12 +384,117 @@
       </div>
       <p class="note">五段動詞口訣：<b>う・つ・る → って ／ む・ぶ・ぬ → んで ／ く → いて ／ ぐ → いで ／ す → して</b>。濁音（む・ぶ・ぬ・ぐ）跟著濁音走，其餘都是清音。</p><p class="note">一句話記完四類：<b>只有動詞和い形容詞要「變形」，な形容詞與名詞只要「加で」</b>（で 就是 です 的中止形）。</p><p class="note">外型像一段、其實是五段的陷阱字：<b>切(き)る・帰(かえ)る・入(はい)る・走(はし)る・要(い)る・知(し)る</b> → 切って・帰って・入って・走って。</p><p class="note">兩個必背例外：<b>行(い)く → 行って</b>、<b>いい → よくて</b>。</p><p class="note"><b>て形本身沒有時態</b>，時態一律由句尾決定：安くて美味しい<b>です</b>（現在）／安くて美味しかった<b>です</b>（過去）。</p><p class="note">學會就能解鎖：<b>〜てください</b>（請～）／<b>〜ています</b>（正在～）／<b>〜てもいいです</b>（可以～）／<b>〜てはいけません</b>（不可以～）／<b>〜てから</b>（～之後）／<b>〜て、〜</b>（動作接續）。</p><p class="note">⚠️ 同一句可能出現兩個「で」，功能不同：<br>「彼は先生<b>で</b>、学校<b>で</b>働いています。」前者＝名詞的接續形，後者＝場所助詞。<b>で 前面是身分・性質→接續；場所・工具・手段→助詞</b>。</p>
     </section>
+
+    <section class="tbl-sec" id="tbl-short">
+      <div class="tbl-head">
+        <h2>short form（常體）怎麼生成</h2>
+        <button class="play-btn" data-range="121-156" data-label="&#9654; 整表"
+                aria-label="朗讀整張表">&#9654; 整表</button>
+      </div>
+      <p class="hint">上面的表是「變完長什麼樣」，這一節是「<b>怎麼變出來</b>」&mdash; 動詞、い形容詞、な形容詞、名詞各走一條路，依四個時態分成四小張。點右欄即朗讀變化後的形。</p>
+      <div class="subhead">
+        <h3>① 現在肯定 ＝ 辭書形（從ます形還原）</h3>
+        <button class="play-btn small" data-range="121-129" data-label="&#9654; 這組"
+                aria-label="朗讀這一組">&#9654; 這組</button>
+      </div>
+      <p class="hint">動詞把「ます」拆掉還原成辭書形；形容詞與名詞則是動最後那個「です」。</p>
+      <div class="tablewrap">
+        <table class="grid te">
+          <thead><tr><th class="rowhead corner">詞類 / 語尾</th>
+            <th class="t-rule">變化規則</th>
+            <th class="t-ex">例（丁寧體 &rarr; 常體）</th></tr></thead>
+          <tbody>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-u">U</span><span class="lesson">五段動詞</span></span><span class="rname">ます形 ～きます</span></th><td class="t-rule"><div class="pat">去「ます」，最後一個假名 <b>i段 → u段</b>（き→く）</div></td><td class="t-ex"><button class="cell" data-idx="121"><span class="jp">書(か)きます &rarr; 書(か)く</span><span class="rm">kakimasu &rarr; kaku</span><span class="cn">寫</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-u">U</span><span class="lesson">五段動詞</span></span><span class="rname">ます形 ～います</span></th><td class="t-rule"><div class="pat">同規則：い → <b>う</b></div></td><td class="t-ex"><button class="cell" data-idx="122"><span class="jp">買(か)います &rarr; 買(か)う</span><span class="rm">kaimasu &rarr; kau</span><span class="cn">買</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-ru">RU</span><span class="lesson">一段動詞</span></span><span class="rname">ます形 ～ます</span></th><td class="t-rule"><div class="pat">去「ます」＋ <b>る</b></div></td><td class="t-ex"><button class="cell" data-idx="123"><span class="jp">食(た)べます &rarr; 食(た)べる</span><span class="rm">tabemasu &rarr; taberu</span><span class="cn">吃</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-suru">SURU</span><span class="lesson">不規則</span></span><span class="rname">します</span></th><td class="t-rule"><div class="pat">→ <b>する</b></div></td><td class="t-ex"><button class="cell" data-idx="124"><span class="jp">勉強(べんきょう)します &rarr; 勉強(べんきょう)する</span><span class="rm">benkyou shimasu &rarr; benkyou suru</span><span class="cn">唸書</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-irreg">IRREG</span><span class="lesson">不規則</span></span><span class="rname">来(き)ます</span></th><td class="t-rule"><div class="pat">→ <b>来(く)る</b>（漢字不變，讀音 き→く）</div></td><td class="t-ex"><button class="cell" data-idx="125"><span class="jp">来(き)ます &rarr; 来(く)る</span><span class="rm">kimasu &rarr; kuru</span><span class="cn">來</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-iadj">い形容詞</span></span><span class="rname">～いです</span></th><td class="t-rule"><div class="pat">直接去掉 <b>です</b>，い 留著</div></td><td class="t-ex"><button class="cell" data-idx="126"><span class="jp">可愛(かわい)いです &rarr; 可愛(かわい)い</span><span class="rm">kawaii desu &rarr; kawaii</span><span class="cn">可愛</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-naadj">な形容詞</span></span><span class="rname">～です</span></th><td class="t-rule"><div class="pat">です → <b>だ</b></div></td><td class="t-ex"><button class="cell" data-idx="127"><span class="jp">静(しず)かです &rarr; 静(しず)かだ</span><span class="rm">shizuka desu &rarr; shizuka da</span><span class="cn">安靜</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-noun">名詞</span></span><span class="rname">～です</span></th><td class="t-rule"><div class="pat">です → <b>だ</b></div></td><td class="t-ex"><button class="cell" data-idx="128"><span class="jp">学生(がくせい)です &rarr; 学生(がくせい)だ</span><span class="rm">gakusei desu &rarr; gakusei da</span><span class="cn">學生</span></button></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="subhead">
+        <h3>② 現在否定 ＝ ない形（從辭書形變）</h3>
+        <button class="play-btn small" data-range="129-139" data-label="&#9654; 這組"
+                aria-label="朗讀這一組">&#9654; 這組</button>
+      </div>
+      <p class="hint">動詞看語尾所在的行，改成同一行的 <b>a段</b> 再加ない；形容詞・名詞則是換掉字尾。</p>
+      <div class="tablewrap">
+        <table class="grid te">
+          <thead><tr><th class="rowhead corner">詞類 / 語尾</th>
+            <th class="t-rule">變化規則</th>
+            <th class="t-ex">例（辭書形 &rarr; ない形）</th></tr></thead>
+          <tbody>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-u">U</span><span class="lesson">五段動詞</span></span><span class="rname">く・む・す・ぶ…</span></th><td class="t-rule"><div class="pat">語尾 <b>u段 → a段</b> ＋ <b>ない</b>（く→か、む→ま）</div></td><td class="t-ex"><button class="cell" data-idx="129"><span class="jp">書(か)く &rarr; 書(か)かない</span><span class="rm">kaku &rarr; kakanai</span><span class="cn">不寫</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-u">U</span><span class="lesson">五段動詞</span></span><span class="rname">～う</span></th><td class="t-rule"><div class="pat">⚠️ う → <b>わ</b>ない（不是 ×あない）</div></td><td class="t-ex"><button class="cell" data-idx="130"><span class="jp">買(か)う &rarr; 買(か)わない</span><span class="rm">kau &rarr; kawanai</span><span class="cn">不買</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-u">U</span><span class="lesson">五段動詞</span></span><span class="rname">ある</span></th><td class="t-rule"><div class="pat">⚠️ 例外：整個變成 <b>ない</b>（沒有 ×あらない）</div></td><td class="t-ex"><button class="cell" data-idx="131"><span class="jp">ある &rarr; ない</span><span class="rm">aru &rarr; nai</span><span class="cn">沒有</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-ru">RU</span><span class="lesson">一段動詞</span></span><span class="rname">～る</span></th><td class="t-rule"><div class="pat">去 <b>る</b> ＋ <b>ない</b></div></td><td class="t-ex"><button class="cell" data-idx="132"><span class="jp">食(た)べる &rarr; 食(た)べない</span><span class="rm">taberu &rarr; tabenai</span><span class="cn">不吃</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-suru">SURU</span><span class="lesson">不規則</span></span><span class="rname">する</span></th><td class="t-rule"><div class="pat">→ <b>しない</b></div></td><td class="t-ex"><button class="cell" data-idx="133"><span class="jp">する &rarr; しない</span><span class="rm">suru &rarr; shinai</span><span class="cn">不做</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-irreg">IRREG</span><span class="lesson">不規則</span></span><span class="rname">来(く)る</span></th><td class="t-rule"><div class="pat">→ <b>来(こ)ない</b>（讀音 く→こ）</div></td><td class="t-ex"><button class="cell" data-idx="134"><span class="jp">来(く)る &rarr; 来(こ)ない</span><span class="rm">kuru &rarr; konai</span><span class="cn">不來</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-iadj">い形容詞</span></span><span class="rname">～い</span></th><td class="t-rule"><div class="pat">去 <b>い</b> ＋ <b>くない</b></div></td><td class="t-ex"><button class="cell" data-idx="135"><span class="jp">可愛(かわい)い &rarr; 可愛(かわい)くない</span><span class="rm">kawaii &rarr; kawaikunai</span><span class="cn">不可愛</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-iadj">い形容詞</span></span><span class="rname">いい</span></th><td class="t-rule"><div class="pat">⚠️ 例外：<b>よくない</b>（不是 ×いくない）</div></td><td class="t-ex"><button class="cell" data-idx="136"><span class="jp">いい &rarr; よくない</span><span class="rm">ii &rarr; yokunai</span><span class="cn">不好</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-naadj">な形容詞</span></span><span class="rname">～だ</span></th><td class="t-rule"><div class="pat">だ → <b>じゃない</b></div></td><td class="t-ex"><button class="cell" data-idx="137"><span class="jp">静(しず)かだ &rarr; 静(しず)かじゃない</span><span class="rm">shizuka da &rarr; shizuka janai</span><span class="cn">不安靜</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-noun">名詞</span></span><span class="rname">～だ</span></th><td class="t-rule"><div class="pat">だ → <b>じゃない</b></div></td><td class="t-ex"><button class="cell" data-idx="138"><span class="jp">学生(がくせい)だ &rarr; 学生(がくせい)じゃない</span><span class="rm">gakusei da &rarr; gakusei janai</span><span class="cn">不是學生</span></button></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="subhead">
+        <h3>③ 過去肯定 ＝ た形（＝て形把 て→た、で→だ）</h3>
+        <button class="play-btn small" data-range="139-152" data-label="&#9654; 這組"
+                aria-label="朗讀這一組">&#9654; 這組</button>
+      </div>
+      <p class="hint">規則和て形<b>一模一樣</b>，只是把て換成た、で換成だ ─ 背過て形就等於背過た形。</p>
+      <div class="tablewrap">
+        <table class="grid te">
+          <thead><tr><th class="rowhead corner">詞類 / 語尾</th>
+            <th class="t-rule">變化規則</th>
+            <th class="t-ex">例（辭書形 &rarr; た形）</th></tr></thead>
+          <tbody>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-u">U</span><span class="lesson">五段動詞</span></span><span class="rname">う・つ・る</span></th><td class="t-rule"><div class="pat">去語尾 ＋ <b>った</b></div></td><td class="t-ex"><button class="cell" data-idx="139"><span class="jp">買(か)う &rarr; 買(か)った</span><span class="rm">kau &rarr; katta</span><span class="cn">買了</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-u">U</span><span class="lesson">五段動詞</span></span><span class="rname">む・ぶ・ぬ</span></th><td class="t-rule"><div class="pat">去語尾 ＋ <b>んだ</b>（濁音）</div></td><td class="t-ex"><button class="cell" data-idx="140"><span class="jp">読(よ)む &rarr; 読(よ)んだ</span><span class="rm">yomu &rarr; yonda</span><span class="cn">讀了</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-u">U</span><span class="lesson">五段動詞</span></span><span class="rname">く</span></th><td class="t-rule"><div class="pat">去語尾 ＋ <b>いた</b></div></td><td class="t-ex"><button class="cell" data-idx="141"><span class="jp">書(か)く &rarr; 書(か)いた</span><span class="rm">kaku &rarr; kaita</span><span class="cn">寫了</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-u">U</span><span class="lesson">五段動詞</span></span><span class="rname">ぐ</span></th><td class="t-rule"><div class="pat">去語尾 ＋ <b>いだ</b>（濁音）</div></td><td class="t-ex"><button class="cell" data-idx="142"><span class="jp">泳(およ)ぐ &rarr; 泳(およ)いだ</span><span class="rm">oyogu &rarr; oyoida</span><span class="cn">游泳了</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-u">U</span><span class="lesson">五段動詞</span></span><span class="rname">す</span></th><td class="t-rule"><div class="pat">去語尾 ＋ <b>した</b></div></td><td class="t-ex"><button class="cell" data-idx="143"><span class="jp">話(はな)す &rarr; 話(はな)した</span><span class="rm">hanasu &rarr; hanashita</span><span class="cn">說了</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-u">U</span><span class="lesson">五段動詞</span></span><span class="rname">行(い)く</span></th><td class="t-rule"><div class="pat">⚠️ 唯一例外：<b>行った</b>（不是 ×行いた）</div></td><td class="t-ex"><button class="cell" data-idx="144"><span class="jp">行(い)く &rarr; 行(い)った</span><span class="rm">iku &rarr; itta</span><span class="cn">去了</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-ru">RU</span><span class="lesson">一段動詞</span></span><span class="rname">～る</span></th><td class="t-rule"><div class="pat">去 <b>る</b> ＋ <b>た</b></div></td><td class="t-ex"><button class="cell" data-idx="145"><span class="jp">食(た)べる &rarr; 食(た)べた</span><span class="rm">taberu &rarr; tabeta</span><span class="cn">吃了</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-suru">SURU</span><span class="lesson">不規則</span></span><span class="rname">する</span></th><td class="t-rule"><div class="pat">→ <b>した</b></div></td><td class="t-ex"><button class="cell" data-idx="146"><span class="jp">する &rarr; した</span><span class="rm">suru &rarr; shita</span><span class="cn">做了</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-irreg">IRREG</span><span class="lesson">不規則</span></span><span class="rname">来(く)る</span></th><td class="t-rule"><div class="pat">→ <b>来(き)た</b>（讀音 く→き）</div></td><td class="t-ex"><button class="cell" data-idx="147"><span class="jp">来(く)る &rarr; 来(き)た</span><span class="rm">kuru &rarr; kita</span><span class="cn">來了</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-iadj">い形容詞</span></span><span class="rname">～い</span></th><td class="t-rule"><div class="pat">去 <b>い</b> ＋ <b>かった</b></div></td><td class="t-ex"><button class="cell" data-idx="148"><span class="jp">可愛(かわい)い &rarr; 可愛(かわい)かった</span><span class="rm">kawaii &rarr; kawaikatta</span><span class="cn">（當時）可愛</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-iadj">い形容詞</span></span><span class="rname">いい</span></th><td class="t-rule"><div class="pat">⚠️ 例外：<b>よかった</b>（不是 ×いかった）</div></td><td class="t-ex"><button class="cell" data-idx="149"><span class="jp">いい &rarr; よかった</span><span class="rm">ii &rarr; yokatta</span><span class="cn">太好了</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-naadj">な形容詞</span></span><span class="rname">～だ</span></th><td class="t-rule"><div class="pat">だ → <b>だった</b></div></td><td class="t-ex"><button class="cell" data-idx="150"><span class="jp">静(しず)かだ &rarr; 静(しず)かだった</span><span class="rm">shizuka da &rarr; shizuka datta</span><span class="cn">（當時）安靜</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-noun">名詞</span></span><span class="rname">～だ</span></th><td class="t-rule"><div class="pat">だ → <b>だった</b></div></td><td class="t-ex"><button class="cell" data-idx="151"><span class="jp">学生(がくせい)だ &rarr; 学生(がくせい)だった</span><span class="rm">gakusei da &rarr; gakusei datta</span><span class="cn">以前是學生</span></button></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="subhead">
+        <h3>④ 過去否定 ＝ 把否定形的「い」換成「かった」</h3>
+        <button class="play-btn small" data-range="152-156" data-label="&#9654; 這組"
+                aria-label="朗讀這一組">&#9654; 這組</button>
+      </div>
+      <p class="hint">四類詞<b>共用同一條規則</b>：現在否定形結尾一定是「い」，把它換成「かった」就成了。</p>
+      <div class="tablewrap">
+        <table class="grid te">
+          <thead><tr><th class="rowhead corner">詞類 / 語尾</th>
+            <th class="t-rule">變化規則</th>
+            <th class="t-ex">例（ない形 &rarr; なかった形）</th></tr></thead>
+          <tbody>
+          <tr><th class="rowhead"><span class="rtop"><span class="lesson">動詞</span></span><span class="rname">～ない</span></th><td class="t-rule"><div class="pat">ない → <b>なかった</b></div></td><td class="t-ex"><button class="cell" data-idx="152"><span class="jp">書(か)かない &rarr; 書(か)かなかった</span><span class="rm">kakanai &rarr; kakanakatta</span><span class="cn">沒寫</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-iadj">い形容詞</span></span><span class="rname">～くない</span></th><td class="t-rule"><div class="pat">くない → <b>くなかった</b></div></td><td class="t-ex"><button class="cell" data-idx="153"><span class="jp">可愛(かわい)くない &rarr; 可愛(かわい)くなかった</span><span class="rm">kawaikunai &rarr; kawaikunakatta</span><span class="cn">（當時）不可愛</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-naadj">な形容詞</span></span><span class="rname">～じゃない</span></th><td class="t-rule"><div class="pat">じゃない → <b>じゃなかった</b></div></td><td class="t-ex"><button class="cell" data-idx="154"><span class="jp">静(しず)かじゃない &rarr; 静(しず)かじゃなかった</span><span class="rm">shizuka janai &rarr; shizuka janakatta</span><span class="cn">（當時）不安靜</span></button></td></tr>
+          <tr><th class="rowhead"><span class="rtop"><span class="ty ty-noun">名詞</span></span><span class="rname">～じゃない</span></th><td class="t-rule"><div class="pat">じゃない → <b>じゃなかった</b></div></td><td class="t-ex"><button class="cell" data-idx="155"><span class="jp">学生(がくせい)じゃない &rarr; 学生(がくせい)じゃなかった</span><span class="rm">gakusei janai &rarr; gakusei janakatta</span><span class="cn">以前不是學生</span></button></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note"><b>short form ＝ 常體（普通形）</b>：對朋友、家人、寫日記時用。它同時是很多句型的<b>必要接續形</b> ─ 〜と思(おも)います／〜と言(い)いました（第 117 課）、〜ないでください（第 119 課）、〜のが好(す)きです（第 120 課）、〜ので（第 144 課）、〜つもりだ（第 156 課）、〜でしょう（第 186 課）前面接的都是 short form。</p><p class="note">動詞的四態全部從<b>辭書形</b>長出來，順序固定：<b>辭書形 → ない形 → た形 → なかった形</b>。所以第一步永遠是先確定它是五段還是一段。</p><p class="note"><b>五段／一段的判斷</b>：辭書形不是「～る」結尾 → 一定五段；是「～る」而る前面是 <b>a・u・o 段</b>（ある・作(つく)る・乗(の)る）→ 五段；る前面是 <b>i・e 段</b> → 多半一段（見(み)る・食(た)べる）。⚠️ 陷阱字 <b>切(き)る・帰(かえ)る・入(はい)る・走(はし)る・知(し)る・要(い)る</b> 長得像一段，其實是五段。</p><p class="note"><b>な形容詞・名詞的「だ」在口語常被省略</b>：「静(しず)か？」「学生(がくせい)？」都很自然；但接 と思(おも)う・らしい 時不能省 ─ 「学生(がくせい)<b>だ</b>と思(おも)う」。</p><p class="note">⚠️ 別把た形和ます形的過去搞混：丁寧體是 <b>食(た)べました</b>，常體是 <b>食(た)べた</b>；同一個句尾只能選一種。</p>
+    </section>
   </main>
 
   <button id="fab-top" type="button" aria-label="回到頂端">&#9650;</button>
 
 <script>
-  var ALL = ["食べます", "食べません", "食べました", "食べませんでした", "帰ります", "帰りません", "帰りました", "帰りませんでした", "行きます", "行きません", "行きました", "行きませんでした", "します", "しません", "しました", "しませんでした", "来ます", "来ません", "来ました", "来ませんでした", "勉強します", "勉強しません", "勉強しました", "勉強しませんでした", "面白いです", "面白くないです", "面白かったです", "面白くなかったです", "いいです", "よくないです", "よかったです", "よくなかったです", "かっこいいです", "かっこよくないです", "かっこよかったです", "かっこよくなかったです", "元気です", "元気じゃないです", "元気でした", "元気じゃなかったです", "便利です", "便利じゃないです", "便利でした", "便利じゃなかったです", "学生です", "学生じゃありません", "学生でした", "学生じゃありませんでした", "日本の映画です", "日本の映画じゃないです", "日本の映画でした", "日本の映画じゃなかったです", "食べる", "食べない", "食べた", "食べなかった", "書く", "書かない", "書いた", "書かなかった", "読む", "読まない", "読んだ", "読まなかった", "来る", "来ない", "来た", "来なかった", "する", "しない", "した", "しなかった", "可愛い", "可愛くない", "可愛かった", "可愛くなかった", "静かだ", "静かじゃない", "静かだった", "静かじゃなかった", "学生だ", "学生じゃない", "学生だった", "学生じゃなかった", "食べています", "食べていません", "食べていました", "食べていませんでした", "食べたいです", "食べたくありません", "食べたかったです", "食べたくありませんでした", "飲みたがっています", "飲みたがっていません", "飲みたがっていました", "飲みたがっていませんでした", "飲みたがります", "飲みたがりません", "飲みたがりました", "飲みたがりませんでした", "行くつもりです", "行くつもりじゃないです", "行くつもりでした", "行くつもりじゃなかったです", "暖かくなります", "暖かくなりません", "暖かくなりました", "暖かくなりませんでした", "買って", "飲んで", "書いて", "泳いで", "話して", "行って", "食べて", "勉強して", "来て", "安くて", "よくて", "静かで", "先生で"];
+  var ALL = ["食べます", "食べません", "食べました", "食べませんでした", "帰ります", "帰りません", "帰りました", "帰りませんでした", "行きます", "行きません", "行きました", "行きませんでした", "します", "しません", "しました", "しませんでした", "来ます", "来ません", "来ました", "来ませんでした", "勉強します", "勉強しません", "勉強しました", "勉強しませんでした", "面白いです", "面白くないです", "面白かったです", "面白くなかったです", "いいです", "よくないです", "よかったです", "よくなかったです", "かっこいいです", "かっこよくないです", "かっこよかったです", "かっこよくなかったです", "元気です", "元気じゃないです", "元気でした", "元気じゃなかったです", "便利です", "便利じゃないです", "便利でした", "便利じゃなかったです", "学生です", "学生じゃありません", "学生でした", "学生じゃありませんでした", "日本の映画です", "日本の映画じゃないです", "日本の映画でした", "日本の映画じゃなかったです", "食べる", "食べない", "食べた", "食べなかった", "書く", "書かない", "書いた", "書かなかった", "読む", "読まない", "読んだ", "読まなかった", "来る", "来ない", "来た", "来なかった", "する", "しない", "した", "しなかった", "可愛い", "可愛くない", "可愛かった", "可愛くなかった", "静かだ", "静かじゃない", "静かだった", "静かじゃなかった", "学生だ", "学生じゃない", "学生だった", "学生じゃなかった", "食べています", "食べていません", "食べていました", "食べていませんでした", "食べたいです", "食べたくありません", "食べたかったです", "食べたくありませんでした", "飲みたがっています", "飲みたがっていません", "飲みたがっていました", "飲みたがっていませんでした", "飲みたがります", "飲みたがりません", "飲みたがりました", "飲みたがりませんでした", "行くつもりです", "行くつもりじゃないです", "行くつもりでした", "行くつもりじゃなかったです", "暖かくなります", "暖かくなりません", "暖かくなりました", "暖かくなりませんでした", "買って", "飲んで", "書いて", "泳いで", "話して", "行って", "食べて", "勉強して", "来て", "安くて", "よくて", "静かで", "先生で", "書く", "買う", "食べる", "勉強する", "来る", "可愛い", "静かだ", "学生だ", "書かない", "買わない", "ない", "食べない", "しない", "来ない", "可愛くない", "よくない", "静かじゃない", "学生じゃない", "買った", "読んだ", "書いた", "泳いだ", "話した", "行った", "食べた", "した", "来た", "可愛かった", "よかった", "静かだった", "学生だった", "書かなかった", "可愛くなかった", "静かじゃなかった", "学生じゃなかった"];
   var SPEED_KEY = 'jp-speech-rate';
   var rate = 1;
   try {
